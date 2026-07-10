@@ -432,9 +432,9 @@ export class TicketDetailComponent implements OnInit {
   ];
 
   assigneeOptions = [
-    { label: 'John Doe', value: 'john.doe' },
-    { label: 'Jane Smith', value: 'jane.smith' },
-    { label: 'Alice Wong', value: 'alice.wong' },
+    { label: 'Athul Krishnan', value: 'Athul.Krishnan' },
+    { label: 'Surya Lekshmi', value: 'Surya.Lekshmi' },
+    { label: 'Manu Kuttan', value: 'Manu.Kuttan' },
     { label: 'Unassigned', value: 'unassigned' },
   ];
 

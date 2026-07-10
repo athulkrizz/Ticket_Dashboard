@@ -80,7 +80,6 @@ import { Ticket, TicketStatus, TicketPriority, CreateTicketRequest } from '../..
       <div class="toolbar">
         <div class="toolbar-left">
           <span class="p-input-icon-left search-wrapper">
-            <i class="pi pi-search"></i>
             <input
               pInputText
               [(ngModel)]="searchQuery"
@@ -572,9 +571,9 @@ export class TicketsComponent implements OnInit {
   ];
 
   assigneeOptions = [
-    { label: 'John Doe', value: 'john.doe' },
-    { label: 'Jane Smith', value: 'jane.smith' },
-    { label: 'Alice Wong', value: 'alice.wong' },
+    { label: 'Athul Krishnan', value: 'Athul.Krishnan' },
+    { label: 'Surya Lekshmi', value: 'Surya.Lekshmi' },
+    { label: 'Manu Kuttan', value: 'Manu.Kuttan' },
   ];
 
   private searchTimeout: any;

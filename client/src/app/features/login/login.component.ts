@@ -67,17 +67,6 @@ import { AuthService } from '../../core/services/auth.service';
               class="login-btn"
             ></button>
 
-            <div class="demo-credentials">
-              <p><strong>Demo Credentials:</strong></p>
-              <div class="cred-chips">
-                <span class="cred-chip" (click)="fillCredentials('admin', 'admin123')">
-                  admin / admin123
-                </span>
-                <span class="cred-chip" (click)="fillCredentials('john.doe', 'password')">
-                  john.doe / password
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
