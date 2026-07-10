@@ -208,6 +208,7 @@ import { Ticket, TicketStatus, TicketPriority } from '../../core/models/ticket.m
       padding: 1.5rem 2rem;
       max-width: 1400px;
       margin: 0 auto;
+      padding-top: 76px;
     }
 
     :host ::ng-deep .detail-breadcrumb {
