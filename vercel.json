@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "client/dist/client/browser",
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 30,
+      "includeFiles": "server/dist/**"
+    }
+  },
   "rewrites": [
     {
       "source": "/api/(.*)",

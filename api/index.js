@@ -3,14 +3,10 @@ const { ValidationPipe } = require('@nestjs/common');
 const { ExpressAdapter } = require('@nestjs/platform-express');
 const express = require('express');
 
-let cachedApp = null;
 const expressApp = express();
+let appPromise = null;
 
 async function bootstrap() {
-  if (cachedApp) {
-    return cachedApp;
-  }
-  
   // Require the compiled app.module from the dist folder built by `nest build`
   const { AppModule } = require('../server/dist/app.module');
   
@@ -34,11 +30,15 @@ async function bootstrap() {
   });
 
   await app.init();
-  cachedApp = app;
   return app;
 }
 
-// Bootstrap synchronously so Vercel can wrap the exported app
-bootstrap();
-
-module.exports = expressApp;
+// Export a handler that waits for NestJS to be fully initialized
+// before forwarding the request to Express
+module.exports = async (req, res) => {
+  if (!appPromise) {
+    appPromise = bootstrap();
+  }
+  await appPromise;
+  expressApp(req, res);
+};
