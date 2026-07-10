@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import 'primeicons/primeicons.css';
+
+/* ─── Base Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #6C63FF;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* ─── Global Link Styles ─── */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-400);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--surface-500);
+}
+
+/* ─── PrimeNG Table Overrides ─── */
+.p-datatable .p-datatable-tbody > tr {
+  transition: background 0.15s ease;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: var(--surface-hover) !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* ─── PrimeNG Card Overrides ─── */
+.p-card {
+  border-radius: 12px;
+  border: 1px solid var(--surface-border);
+  box-shadow: none;
+}
+
+/* ─── PrimeNG Dialog Overrides ─── */
+.p-dialog {
+  border-radius: 16px !important;
+}
+
+.p-dialog .p-dialog-header {
+  border-radius: 16px 16px 0 0 !important;
+}
+
+/* ─── PrimeNG Tag Overrides ─── */
+.p-tag {
+  white-space: nowrap;
+  font-size: 0.78rem !important;
+}
+
+/* ─── AI Drawer Override ─── */
+.p-drawer .p-drawer-content {
+  padding: 0.5rem !important;
+  overflow-y: auto;
+}
+
+/* ─── PrimeNG SelectButton Fix ─── */
+.p-selectbutton .p-togglebutton {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+}
+
+/* ─── Utility Classes ─── */
+.mt-3 { margin-top: 0.75rem; }
+
+/* ─── Page Transition ─── */
+router-outlet + * {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Selection Color ─── */
+::selection {
+  background: rgba(108, 99, 255, 0.3);
+  color: white;
+}
