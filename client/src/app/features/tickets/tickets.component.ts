@@ -258,6 +258,7 @@ import { Ticket, TicketStatus, TicketPriority, CreateTicketRequest } from '../..
       padding: 1.5rem 2rem;
       max-width: 1600px;
       margin: 0 auto;
+      padding-top: 76px;
     }
 
     /* Stat Cards */
