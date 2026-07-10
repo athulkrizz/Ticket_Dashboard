@@ -15,6 +15,27 @@ html {
 
 :root {
   --primary-color: #6C63FF;
+  
+  /* Light theme variables */
+  --surface-ground: #f8f9fa;
+  --surface-card: #ffffff;
+  --surface-border: #e5e7eb;
+  --surface-hover: #f3f4f6;
+  --surface-400: #cbd5e1;
+  --surface-500: #94a3b8;
+  --text-color: #1f2937;
+  --text-color-secondary: #6b7280;
+}
+
+.dark-theme {
+  --surface-ground: #0f172a;
+  --surface-card: #1e293b;
+  --surface-border: #334155;
+  --surface-hover: #334155;
+  --surface-400: #475569;
+  --surface-500: #64748b;
+  --text-color: #f1f5f9;
+  --text-color-secondary: #cbd5e1;
 }
 
 body {

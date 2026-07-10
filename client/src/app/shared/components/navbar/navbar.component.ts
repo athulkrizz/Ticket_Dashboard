@@ -67,9 +67,11 @@ import { MenuItem } from 'primeng/api';
       height: 60px;
       background: var(--surface-card);
       border-bottom: 1px solid var(--surface-border);
-      position: sticky;
+      position: fixed;
       top: 0;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      z-index: 1000;
     }
 
     .navbar-left {

@@ -30,6 +30,7 @@ import { environment } from '../environments/environment';
     .app-main {
       flex: 1;
       background: var(--surface-ground);
+      padding-top: 60px;
     }
   `],
 })
